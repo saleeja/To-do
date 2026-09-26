@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TaskMaster Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    ✓
+                </div>
+
+                <div class="logo-text">
+
+                    <h2>TaskMaster</h2>
+
+                    <span>Pro Edition</span>
+
+                </div>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <a href="#" class="nav-item active">
+                    🏠
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    ☆
+                    <span>Important</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    ☷
+                    <span>All Tasks</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    📊
+                    <span>Analytics</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main-content">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div class="search-box">
+
+                    <span>🔍</span>
+
+                    <input
+                        type="text"
+                        placeholder="Search tasks..."
+                    >
+
+                </div>
+
+
+                <div class="sort-box">
+
+                    <span>☷</span>
+
+                    <select>
+
+                        <option>Newest First</option>
+
+                        <option>Oldest First</option>
+
+                        <option>Important First</option>
+
+                    </select>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- DASHBOARD -->
+
+            <section class="dashboard">
+
+
+                <!-- HEADER -->
+
+                <div class="dashboard-header">
+
+                    <h1>Dashboard</h1>
+
+                    <p>
+                        Overview of your tasks and productivity
+                    </p>
+
+                </div>
+
+
+
+                <!-- STATISTICS -->
+
+                <div class="stats-grid">
+
+
+                    <!-- TOTAL -->
+
+                    <div class="stat-card total">
+
+                        <div class="card-top">
+
+                            <span>Total Tasks</span>
+
+                            <div class="card-icon">
+                                ↗
+                            </div>
+
+                        </div>
+
+                        <h2>0</h2>
+
+                    </div>
+
+
+
+                    <!-- ACTIVE -->
+
+                    <div class="stat-card active">
+
+                        <div class="card-top">
+
+                            <span>Active</span>
+
+                            <div class="card-icon">
+                                ○
+                            </div>
+
+                        </div>
+
+                        <h2>0</h2>
+
+                    </div>
+
+
+
+                    <!-- COMPLETED -->
+
+                    <div class="stat-card completed">
+
+                        <div class="card-top">
+
+                            <span>Completed</span>
+
+                            <div class="card-icon">
+                                ✓
+                            </div>
+
+                        </div>
+
+                        <h2>0</h2>
+
+                        <p>0% completion rate</p>
+
+                    </div>
+
+
+
+                    <!-- IMPORTANT -->
+
+                    <div class="stat-card important">
+
+                        <div class="card-top">
+
+                            <span>Important</span>
+
+                            <div class="card-icon">
+                                ☆
+                            </div>
+
+                        </div>
+
+                        <h2>0</h2>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TASK SUMMARY -->
+
+                <div class="task-summary-grid">
+
+
+                    <!-- TODAY -->
+
+                    <div class="summary-card">
+
+                        <div class="summary-title">
+
+                            <span>📅</span>
+
+                            <h2>Today's Tasks</h2>
+
+                        </div>
+
+                        <h3>0</h3>
+
+                        <p>
+                            Tasks scheduled for today
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- UPCOMING -->
+
+                    <div class="summary-card">
+
+                        <div class="summary-title">
+
+                            <span>↗</span>
+
+                            <h2>Upcoming</h2>
+
+                        </div>
+
+                        <h3>0</h3>
+
+                        <p>
+                            Due in the next 7 days
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- OVERDUE -->
+
+                    <div class="summary-card overdue">
+
+                        <div class="summary-title">
+
+                            <span>○</span>
+
+                            <h2>Overdue</h2>
+
+                        </div>
+
+                        <h3>0</h3>
+
+                        <p>
+                            Tasks past their due date
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ADD TASK -->
+
+            <button class="add-task-btn">
+                +
+            </button>
+
+
+        </main>
+
+    </div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

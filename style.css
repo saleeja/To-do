@@ -1,0 +1,684 @@
+/* ========================================
+   BASIC RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8fafc;
+    color: #111827;
+}
+
+
+/* ========================================
+   MAIN APP
+======================================== */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+    width: 303px;
+    min-height: 100vh;
+
+    background-color: #ffffff;
+
+    border-right: 1px solid #e5e7eb;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Logo */
+
+.logo {
+    height: 112px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px 28px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #9333ea
+    );
+
+    color: white;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-right: 14px;
+}
+
+
+.logo-text h2 {
+    font-size: 20px;
+    color: #111827;
+
+    margin-bottom: 5px;
+}
+
+
+.logo-text span {
+    font-size: 14px;
+    color: #64748b;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.navigation {
+    padding: 20px 18px;
+}
+
+
+.nav-item {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    height: 44px;
+
+    padding: 0 16px;
+
+    margin-bottom: 8px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    color: #111827;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.nav-item:hover {
+    background-color: #f1f5f9;
+}
+
+
+/* Active menu */
+
+.nav-item.active {
+    background-color: #050314;
+    color: white;
+}
+
+
+.nav-item span {
+    flex: 1;
+}
+
+
+/* ========================================
+   PRO TIP
+======================================== */
+
+.pro-tip {
+    margin-top: auto;
+
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+
+    padding: 15px;
+
+    background-color: #f5f0ff;
+
+    border-radius: 12px;
+}
+
+
+.pro-tip strong {
+    display: block;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+}
+
+
+.pro-tip p {
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #475569;
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+.main-content {
+    flex: 1;
+
+    min-width: 0;
+
+    background-color: #f8fafc;
+}
+
+
+/* ========================================
+   TOP BAR
+======================================== */
+
+.topbar {
+    height: 84px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 38px;
+
+    gap: 20px;
+}
+
+
+/* Search */
+
+.search-box {
+    width: 530px;
+    height: 44px;
+
+    background-color: #f8fafc;
+
+    border-radius: 11px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    border: 1px solid #f1f5f9;
+}
+
+
+.search-box span {
+    font-size: 20px;
+
+    color: #94a3b8;
+
+    margin-right: 12px;
+}
+
+
+.search-box input {
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    width: 100%;
+
+    font-size: 15px;
+
+    color: #111827;
+}
+
+
+.search-box input::placeholder {
+    color: #64748b;
+}
+
+
+/* Sort */
+
+.sort-box {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-left: auto;
+}
+
+
+.sort-box > span {
+    font-size: 20px;
+
+    color: #64748b;
+}
+
+
+.sort-box select {
+    width: 230px;
+
+    height: 44px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 11px;
+
+    padding: 0 15px;
+
+    background-color: white;
+
+    font-size: 15px;
+
+    color: #111827;
+
+    outline: none;
+}
+
+
+/* ========================================
+   DASHBOARD
+======================================== */
+
+.dashboard {
+    padding: 40px 38px;
+}
+
+
+/* Dashboard heading */
+
+.dashboard-header {
+    margin-bottom: 38px;
+}
+
+
+.dashboard-header h1 {
+    font-size: 38px;
+
+    color: #172033;
+
+    margin-bottom: 12px;
+}
+
+
+.dashboard-header p {
+    font-size: 18px;
+
+    color: #475569;
+}
+
+
+/* ========================================
+   STATISTICS GRID
+======================================== */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 28px;
+
+    margin-bottom: 38px;
+}
+
+
+/* ========================================
+   STAT CARD
+======================================== */
+
+.stat-card {
+    min-height: 240px;
+
+    padding: 28px 30px;
+
+    border-radius: 16px;
+
+    border: 2px solid;
+
+    background-color: white;
+}
+
+
+/* Top section */
+
+.card-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.card-top > span {
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* Card number */
+
+.stat-card h2 {
+    font-size: 38px;
+
+    margin-top: 40px;
+}
+
+
+/* Card description */
+
+.stat-card p {
+    margin-top: 32px;
+
+    font-size: 15px;
+}
+
+
+/* Card icon */
+
+.card-icon {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+/* ========================================
+   TOTAL CARD
+======================================== */
+
+.stat-card.total {
+    background-color: #eff6ff;
+
+    border-color: #bfdbfe;
+
+    color: #123b85;
+}
+
+
+.stat-card.total .card-icon {
+    background-color: #bfdbfe;
+}
+
+
+/* ========================================
+   ACTIVE CARD
+======================================== */
+
+.stat-card.active {
+    background-color: #fff7ed;
+
+    border-color: #fed7aa;
+
+    color: #9a3412;
+}
+
+
+.stat-card.active .card-icon {
+    background-color: #fed7aa;
+}
+
+
+/* ========================================
+   COMPLETED CARD
+======================================== */
+
+.stat-card.completed {
+    background-color: #ecfdf5;
+
+    border-color: #a7f3d0;
+
+    color: #047857;
+}
+
+
+.stat-card.completed .card-icon {
+    background-color: #a7f3d0;
+}
+
+
+/* ========================================
+   IMPORTANT CARD
+======================================== */
+
+.stat-card.important {
+    background-color: #fffbeb;
+
+    border-color: #fde68a;
+
+    color: #92400e;
+}
+
+
+.stat-card.important .card-icon {
+    background-color: #fde68a;
+}
+
+
+/* ========================================
+   TASK SUMMARY
+======================================== */
+
+.task-summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* Summary card */
+
+.summary-card {
+    min-height: 235px;
+
+    background-color: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 30px;
+}
+
+
+/* Title */
+
+.summary-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.summary-title span {
+    font-size: 27px;
+
+    color: #7c3aed;
+}
+
+
+.summary-title h2 {
+    font-size: 20px;
+
+    color: #111827;
+}
+
+
+/* Number */
+
+.summary-card h3 {
+    font-size: 36px;
+
+    margin-top: 48px;
+
+    color: #111827;
+}
+
+
+/* Description */
+
+.summary-card p {
+    margin-top: 34px;
+
+    color: #475569;
+
+    font-size: 15px;
+}
+
+
+/* ========================================
+   OVERDUE
+======================================== */
+
+.summary-card.overdue .summary-title span {
+    color: #dc2626;
+}
+
+
+.summary-card.overdue h3 {
+    color: #dc2626;
+}
+
+
+/* ========================================
+   ADD TASK BUTTON
+======================================== */
+
+.add-task-btn {
+    position: fixed;
+
+    right: 28px;
+    bottom: 28px;
+
+    width: 76px;
+    height: 76px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #6d28d9,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-size: 34px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(124, 58, 237, 0.3);
+}
+
+
+.add-task-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .task-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .sort-box {
+        display: none;
+    }
+
+    .dashboard {
+        padding: 30px 20px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header h1 {
+        font-size: 30px;
+    }
+
+}
