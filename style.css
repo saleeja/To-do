@@ -1,6 +1,6 @@
-/* ========================================
-   BASIC RESET
-======================================== */
+/* =========================================
+   RESET
+========================================= */
 
 * {
     margin: 0;
@@ -8,46 +8,55 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background-color: #f8fafc;
+
     color: #111827;
 }
 
 
-/* ========================================
-   MAIN APP
-======================================== */
+/* =========================================
+   APP
+========================================= */
 
 .app {
     display: flex;
+
     min-height: 100vh;
 }
 
 
-/* ========================================
+/* =========================================
    SIDEBAR
-======================================== */
+========================================= */
 
 .sidebar {
-    width: 303px;
+    width: 297px;
+
     min-height: 100vh;
 
-    background-color: #ffffff;
+    background-color: white;
 
     border-right: 1px solid #e5e7eb;
 
     display: flex;
+
     flex-direction: column;
 }
 
 
-/* Logo */
+/* =========================================
+   LOGO
+========================================= */
 
 .logo {
-    height: 112px;
+    height: 108px;
 
     display: flex;
+
     align-items: center;
 
     padding: 20px 28px;
@@ -60,21 +69,24 @@ body {
     width: 48px;
     height: 48px;
 
+    border-radius: 15px;
+
     background: linear-gradient(
         135deg,
-        #7c3aed,
+        #6d28d9,
         #9333ea
     );
 
     color: white;
 
-    border-radius: 15px;
-
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    font-size: 24px;
+    font-size: 25px;
+
     font-weight: bold;
 
     margin-right: 14px;
@@ -83,7 +95,6 @@ body {
 
 .logo-text h2 {
     font-size: 20px;
-    color: #111827;
 
     margin-bottom: 5px;
 }
@@ -91,38 +102,41 @@ body {
 
 .logo-text span {
     font-size: 14px;
+
     color: #64748b;
 }
 
 
-/* ========================================
+/* =========================================
    NAVIGATION
-======================================== */
+========================================= */
 
 .navigation {
-    padding: 20px 18px;
+    padding: 22px 18px;
 }
 
 
 .nav-item {
+    height: 46px;
+
     display: flex;
+
     align-items: center;
 
-    gap: 18px;
-
-    height: 44px;
+    gap: 17px;
 
     padding: 0 16px;
 
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 
-    border-radius: 9px;
+    border-radius: 10px;
 
     text-decoration: none;
 
     color: #111827;
 
     font-size: 16px;
+
     font-weight: 600;
 }
 
@@ -132,35 +146,40 @@ body {
 }
 
 
-/* Active menu */
-
 .nav-item.active {
     background-color: #050314;
+
     color: white;
 }
 
 
-.nav-item span {
-    flex: 1;
+.nav-icon {
+    width: 25px;
+
+    text-align: center;
+
+    font-size: 23px;
 }
 
 
-/* ========================================
+/* =========================================
    PRO TIP
-======================================== */
+========================================= */
 
 .pro-tip {
     margin-top: auto;
 
     margin-left: 18px;
+
     margin-right: 18px;
+
     margin-bottom: 18px;
 
     padding: 15px;
 
-    background-color: #f5f0ff;
-
     border-radius: 12px;
+
+    background-color: #f5f0ff;
 }
 
 
@@ -170,8 +189,6 @@ body {
     font-size: 13px;
 
     margin-bottom: 8px;
-
-    color: #374151;
 }
 
 
@@ -184,9 +201,9 @@ body {
 }
 
 
-/* ========================================
+/* =========================================
    MAIN CONTENT
-======================================== */
+========================================= */
 
 .main-content {
     flex: 1;
@@ -197,12 +214,12 @@ body {
 }
 
 
-/* ========================================
-   TOP BAR
-======================================== */
+/* =========================================
+   TOPBAR
+========================================= */
 
 .topbar {
-    height: 84px;
+    height: 82px;
 
     background-color: white;
 
@@ -218,46 +235,46 @@ body {
 }
 
 
-/* Search */
+/* =========================================
+   SEARCH
+========================================= */
 
 .search-box {
-    width: 530px;
+    width: 520px;
+
     height: 44px;
 
-    background-color: #f8fafc;
-
-    border-radius: 11px;
-
     display: flex;
+
     align-items: center;
 
     padding: 0 15px;
 
-    border: 1px solid #f1f5f9;
+    background-color: #f1f3f6;
+
+    border-radius: 11px;
 }
 
 
 .search-box span {
-    font-size: 20px;
+    font-size: 25px;
 
-    color: #94a3b8;
+    color: #64748b;
 
-    margin-right: 12px;
+    margin-right: 10px;
 }
 
 
 .search-box input {
+    width: 100%;
+
     border: none;
 
     outline: none;
 
     background: transparent;
 
-    width: 100%;
-
     font-size: 15px;
-
-    color: #111827;
 }
 
 
@@ -266,81 +283,110 @@ body {
 }
 
 
-/* Sort */
+/* =========================================
+   SORT
+========================================= */
 
 .sort-box {
+    margin-left: auto;
+
     display: flex;
+
     align-items: center;
 
     gap: 10px;
-
-    margin-left: auto;
 }
 
 
 .sort-box > span {
-    font-size: 20px;
+    font-size: 21px;
 
     color: #64748b;
 }
 
 
 .sort-box select {
-    width: 230px;
+    width: 225px;
 
     height: 44px;
 
-    border: 1px solid #e5e7eb;
-
-    border-radius: 11px;
-
-    padding: 0 15px;
-
-    background-color: white;
-
-    font-size: 15px;
-
-    color: #111827;
+    border: none;
 
     outline: none;
+
+    border-radius: 10px;
+
+    padding: 0 14px;
+
+    background-color: #f1f3f6;
+
+    font-size: 15px;
 }
 
 
-/* ========================================
-   DASHBOARD
-======================================== */
+/* =========================================
+   PAGES
+========================================= */
 
-.dashboard {
+.page {
+    display: none;
+
     padding: 40px 38px;
 }
 
 
-/* Dashboard heading */
-
-.dashboard-header {
-    margin-bottom: 38px;
+#dashboard-page {
+    display: block;
 }
 
 
-.dashboard-header h1 {
+/* =========================================
+   PAGE HEADERS
+========================================= */
+
+.dashboard-header,
+.page-header {
+    margin-bottom: 35px;
+}
+
+
+.dashboard-header h1,
+.page-header h1 {
     font-size: 38px;
 
     color: #172033;
-
-    margin-bottom: 12px;
 }
 
 
-.dashboard-header p {
+.dashboard-header p,
+.page-header p {
+    margin-top: 10px;
+
     font-size: 18px;
 
     color: #475569;
 }
 
 
-/* ========================================
-   STATISTICS GRID
-======================================== */
+.page-header h1 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.page-star {
+    color: #f59e0b;
+
+    font-size: 40px;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
 
 .stats-grid {
     display: grid;
@@ -350,67 +396,40 @@ body {
 
     gap: 28px;
 
-    margin-bottom: 38px;
+    margin-bottom: 35px;
 }
 
 
-/* ========================================
-   STAT CARD
-======================================== */
-
 .stat-card {
-    min-height: 240px;
+    min-height: 235px;
 
     padding: 28px 30px;
 
     border-radius: 16px;
 
     border: 2px solid;
-
-    background-color: white;
 }
 
-
-/* Top section */
 
 .card-top {
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
+
+    justify-content: space-between;
 }
 
 
 .card-top > span {
-    font-size: 16px;
-
     font-weight: 600;
+
+    font-size: 16px;
 }
 
-
-/* Card number */
-
-.stat-card h2 {
-    font-size: 38px;
-
-    margin-top: 40px;
-}
-
-
-/* Card description */
-
-.stat-card p {
-    margin-top: 32px;
-
-    font-size: 15px;
-}
-
-
-/* Card icon */
 
 .card-icon {
     width: 43px;
+
     height: 43px;
 
     border-radius: 12px;
@@ -418,15 +437,28 @@ body {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     font-size: 25px;
 }
 
 
-/* ========================================
-   TOTAL CARD
-======================================== */
+.stat-card h2 {
+    margin-top: 40px;
+
+    font-size: 38px;
+}
+
+
+.stat-card p {
+    margin-top: 30px;
+
+    font-size: 15px;
+}
+
+
+/* TOTAL */
 
 .stat-card.total {
     background-color: #eff6ff;
@@ -442,9 +474,7 @@ body {
 }
 
 
-/* ========================================
-   ACTIVE CARD
-======================================== */
+/* ACTIVE */
 
 .stat-card.active {
     background-color: #fff7ed;
@@ -460,9 +490,7 @@ body {
 }
 
 
-/* ========================================
-   COMPLETED CARD
-======================================== */
+/* COMPLETED */
 
 .stat-card.completed {
     background-color: #ecfdf5;
@@ -478,9 +506,7 @@ body {
 }
 
 
-/* ========================================
-   IMPORTANT CARD
-======================================== */
+/* IMPORTANT */
 
 .stat-card.important {
     background-color: #fffbeb;
@@ -496,9 +522,9 @@ body {
 }
 
 
-/* ========================================
-   TASK SUMMARY
-======================================== */
+/* =========================================
+   SUMMARY CARDS
+========================================= */
 
 .task-summary-grid {
     display: grid;
@@ -510,10 +536,8 @@ body {
 }
 
 
-/* Summary card */
-
 .summary-card {
-    min-height: 235px;
+    min-height: 220px;
 
     background-color: white;
 
@@ -524,8 +548,6 @@ body {
     padding: 30px;
 }
 
-
-/* Title */
 
 .summary-title {
     display: flex;
@@ -545,26 +567,18 @@ body {
 
 .summary-title h2 {
     font-size: 20px;
-
-    color: #111827;
 }
 
-
-/* Number */
 
 .summary-card h3 {
+    margin-top: 45px;
+
     font-size: 36px;
-
-    margin-top: 48px;
-
-    color: #111827;
 }
 
 
-/* Description */
-
 .summary-card p {
-    margin-top: 34px;
+    margin-top: 30px;
 
     color: #475569;
 
@@ -572,31 +586,364 @@ body {
 }
 
 
-/* ========================================
-   OVERDUE
-======================================== */
-
-.summary-card.overdue .summary-title span {
+.overdue .summary-title span,
+.overdue h3 {
     color: #dc2626;
 }
 
 
-.summary-card.overdue h3 {
+/* =========================================
+   TASK SECTION
+========================================= */
+
+.dashboard-task-section {
+    margin-top: 35px;
+}
+
+
+.dashboard-task-section h2 {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   TASK LIST
+========================================= */
+
+.task-list,
+.all-task-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.task-item {
+    background-color: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    padding: 17px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    transition: 0.2s;
+}
+
+
+.task-item:hover {
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+.task-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.task-text {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #1e293b;
+}
+
+
+.task-meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 8px;
+}
+
+
+.task-category,
+.task-priority,
+.task-date {
+    font-size: 12px;
+
+    padding: 4px 8px;
+
+    border-radius: 6px;
+
+    background-color: #f1f5f9;
+
+    color: #475569;
+}
+
+
+.task-priority {
+    text-transform: capitalize;
+
+    font-weight: 600;
+}
+
+
+.priority-low {
+    background-color: #ecfdf5;
+
+    color: #047857;
+}
+
+
+.priority-medium {
+    background-color: #fff7ed;
+
+    color: #c2410c;
+}
+
+
+.priority-high {
+    background-color: #fef2f2;
+
     color: #dc2626;
 }
 
 
-/* ========================================
-   ADD TASK BUTTON
-======================================== */
+.task-description {
+    margin-top: 8px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.task-actions {
+    display: flex;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+
+.task-actions button {
+    width: 36px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #f1f5f9;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+.task-actions button:hover {
+    background-color: #e2e8f0;
+}
+
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+
+    color: #94a3b8;
+}
+
+
+.task-item.important {
+    border-color: #facc15;
+
+    background-color: #fffbeb;
+}
+
+
+/* =========================================
+   IMPORTANT PAGE
+========================================= */
+
+.important-container {
+    min-height: 365px;
+
+    background-color: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+.empty-important {
+    text-align: center;
+
+    max-width: 850px;
+}
+
+
+.important-icon {
+    width: 130px;
+
+    height: 130px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background-color: #fffbeb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #fbbf24;
+
+    font-size: 75px;
+}
+
+
+.empty-important h2 {
+    margin-bottom: 12px;
+
+    font-size: 24px;
+}
+
+
+.empty-important p {
+    color: #475569;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   ANALYTICS
+========================================= */
+
+.analytics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.analytics-card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e2e8f0;
+}
+
+
+.analytics-card h3 {
+    color: #64748b;
+
+    margin-bottom: 20px;
+}
+
+
+.analytics-card strong {
+    font-size: 36px;
+}
+
+
+.progress-card {
+    margin-top: 25px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e2e8f0;
+}
+
+
+.progress-card h2 {
+    margin-bottom: 20px;
+}
+
+
+.progress-bar {
+    height: 18px;
+
+    background-color: #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.progress-fill {
+    height: 100%;
+
+    width: 0%;
+
+    background-color: #7c3aed;
+
+    transition: width 0.4s;
+}
+
+
+.progress-card p {
+    margin-top: 12px;
+
+    color: #64748b;
+}
+
+
+/* =========================================
+   ADD BUTTON
+========================================= */
 
 .add-task-btn {
     position: fixed;
 
-    right: 28px;
-    bottom: 28px;
+    right: 30px;
+
+    bottom: 30px;
 
     width: 76px;
+
     height: 76px;
 
     border: none;
@@ -611,12 +958,14 @@ body {
 
     color: white;
 
-    font-size: 34px;
+    font-size: 35px;
 
     cursor: pointer;
 
     box-shadow:
         0 10px 25px rgba(124, 58, 237, 0.3);
+
+    transition: 0.2s;
 }
 
 
@@ -625,18 +974,359 @@ body {
 }
 
 
-/* ========================================
-   RESPONSIVE DESIGN
-======================================== */
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background-color:
+        rgba(15, 23, 42, 0.55);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+
+.modal-overlay.show {
+    display: flex;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.task-modal {
+    width: 100%;
+
+    max-width: 600px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+
+    animation:
+        modalOpen 0.2s ease;
+}
+
+
+@keyframes modalOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-20px)
+            scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.modal-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+.modal-header h2 {
+    font-size: 25px;
+
+    color: #111827;
+
+    margin-bottom: 6px;
+}
+
+
+.modal-header p {
+    font-size: 14px;
+
+    color: #64748b;
+}
+
+
+.close-modal {
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #f1f5f9;
+
+    color: #475569;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.close-modal:hover {
+    background-color: #e2e8f0;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #334155;
+
+    margin-bottom: 8px;
+}
+
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 9px;
+
+    padding: 12px 13px;
+
+    font-size: 14px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    background-color: white;
+
+    color: #111827;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 90px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(124, 58, 237, 0.1);
+}
+
+
+/* =========================================
+   FORM ROW
+========================================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   IMPORTANT CHECKBOX
+========================================= */
+
+.important-checkbox {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px;
+
+    background-color: #fffbeb;
+
+    border: 1px solid #fde68a;
+
+    border-radius: 9px;
+
+    margin-bottom: 25px;
+}
+
+
+.important-checkbox input {
+    width: 17px;
+
+    height: 17px;
+
+    accent-color: #7c3aed;
+
+    cursor: pointer;
+}
+
+
+.important-checkbox label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #92400e;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MODAL ACTIONS
+========================================= */
+
+.modal-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+}
+
+
+.cancel-btn,
+.submit-task-btn {
+    height: 42px;
+
+    padding: 0 20px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.cancel-btn {
+    border: 1px solid #cbd5e1;
+
+    background-color: white;
+
+    color: #475569;
+}
+
+
+.cancel-btn:hover {
+    background-color: #f8fafc;
+}
+
+
+.submit-task-btn {
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #6d28d9,
+        #7c3aed
+    );
+
+    color: white;
+}
+
+
+.submit-task-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media (max-width: 1100px) {
 
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
     }
 
+
     .task-summary-grid {
+
         grid-template-columns: 1fr;
+
+    }
+
+
+    .analytics-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
     }
 
 }
@@ -645,23 +1335,69 @@ body {
 @media (max-width: 750px) {
 
     .sidebar {
+
         width: 220px;
+
     }
+
 
     .topbar {
+
         padding: 0 20px;
+
     }
+
 
     .search-box {
+
         width: 100%;
+
     }
+
 
     .sort-box {
+
         display: none;
+
     }
 
-    .dashboard {
+
+    .page {
+
         padding: 30px 20px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .task-modal {
+
+        padding: 22px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .task-item {
+
+        align-items: flex-start;
+
+    }
+
+
+    .task-actions {
+
+        flex-direction: column;
+
     }
 
 }
@@ -670,15 +1406,44 @@ body {
 @media (max-width: 550px) {
 
     .sidebar {
+
         display: none;
+
     }
+
 
     .stats-grid {
+
         grid-template-columns: 1fr;
+
     }
 
-    .dashboard-header h1 {
+
+    .analytics-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .dashboard-header h1,
+    .page-header h1 {
+
         font-size: 30px;
+
+    }
+
+
+    .add-task-btn {
+
+        width: 60px;
+
+        height: 60px;
+
+        right: 20px;
+
+        bottom: 20px;
+
     }
 
 }

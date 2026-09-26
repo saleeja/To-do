@@ -5,10 +5,9 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TaskMaster Dashboard</title>
+    <title>TaskMaster</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -17,295 +16,786 @@
 
 <body>
 
-    <div class="app">
+
+<div class="app">
 
 
-        <!-- ================= SIDEBAR ================= -->
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
 
-        <aside class="sidebar">
+    <aside class="sidebar">
 
-            <div class="logo">
 
-                <div class="logo-icon">
-                    ✓
-                </div>
+        <!-- LOGO -->
 
-                <div class="logo-text">
+        <div class="logo">
 
-                    <h2>TaskMaster</h2>
+            <div class="logo-icon">
+                ✓
+            </div>
 
-                    <span>Pro Edition</span>
+            <div class="logo-text">
 
-                </div>
+                <h2>TaskMaster</h2>
+
+                <span>Pro Edition</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navigation">
+
+
+            <a
+                href="#"
+                class="nav-item active"
+                data-page="dashboard"
+            >
+
+                <span class="nav-icon">⌂</span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+                data-page="important"
+            >
+
+                <span class="nav-icon">☆</span>
+
+                <span>Important</span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+                data-page="all-tasks"
+            >
+
+                <span class="nav-icon">☷</span>
+
+                <span>All Tasks</span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+                data-page="analytics"
+            >
+
+                <span class="nav-icon">▥</span>
+
+                <span>Analytics</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- PRO TIP -->
+
+        <div class="pro-tip">
+
+            <strong>💡 Pro Tip</strong>
+
+            <p>
+                Use AI suggestions to quickly add tasks!
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =====================================
+             TOP BAR
+        ====================================== -->
+
+        <header class="topbar">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search tasks..."
+                >
 
             </div>
 
 
-            <nav class="navigation">
+            <!-- SORT -->
 
-                <a href="#" class="nav-item active">
-                    🏠
-                    <span>Dashboard</span>
-                </a>
+            <div class="sort-box">
 
-                <a href="#" class="nav-item">
-                    ☆
-                    <span>Important</span>
-                </a>
+                <span>☷</span>
 
-                <a href="#" class="nav-item">
-                    ☷
-                    <span>All Tasks</span>
-                </a>
+                <select id="sortSelect">
 
-                <a href="#" class="nav-item">
-                    📊
-                    <span>Analytics</span>
-                </a>
+                    <option value="newest">
+                        Newest First
+                    </option>
 
-            </nav>
+                    <option value="oldest">
+                        Oldest First
+                    </option>
 
-        </aside>
+                    <option value="important">
+                        Important First
+                    </option>
+
+                </select>
+
+            </div>
 
 
-
-        <!-- ================= MAIN ================= -->
-
-        <main class="main-content">
+        </header>
 
 
-            <!-- TOP BAR -->
 
-            <header class="topbar">
+        <!-- =====================================
+             DASHBOARD
+        ====================================== -->
 
-                <div class="search-box">
+        <section
+            class="page dashboard-page"
+            id="dashboard-page"
+        >
 
-                    <span>🔍</span>
 
-                    <input
-                        type="text"
-                        placeholder="Search tasks..."
-                    >
+            <div class="dashboard-header">
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Overview of your tasks and productivity
+                </p>
+
+            </div>
+
+
+
+            <!-- STATISTICS -->
+
+            <div class="stats-grid">
+
+
+                <!-- TOTAL -->
+
+                <div class="stat-card total">
+
+                    <div class="card-top">
+
+                        <span>Total Tasks</span>
+
+                        <div class="card-icon">
+                            ↗
+                        </div>
+
+                    </div>
+
+                    <h2 id="totalCount">0</h2>
 
                 </div>
 
 
-                <div class="sort-box">
 
-                    <span>☷</span>
+                <!-- ACTIVE -->
 
-                    <select>
+                <div class="stat-card active">
 
-                        <option>Newest First</option>
+                    <div class="card-top">
 
-                        <option>Oldest First</option>
+                        <span>Active</span>
 
-                        <option>Important First</option>
+                        <div class="card-icon">
+                            ○
+                        </div>
 
-                    </select>
+                    </div>
+
+                    <h2 id="activeCount">0</h2>
 
                 </div>
 
-            </header>
 
 
+                <!-- COMPLETED -->
 
-            <!-- DASHBOARD -->
+                <div class="stat-card completed">
 
-            <section class="dashboard">
+                    <div class="card-top">
 
+                        <span>Completed</span>
 
-                <!-- HEADER -->
+                        <div class="card-icon">
+                            ✓
+                        </div>
 
-                <div class="dashboard-header">
+                    </div>
 
-                    <h1>Dashboard</h1>
+                    <h2 id="completedCount">0</h2>
 
-                    <p>
-                        Overview of your tasks and productivity
+                    <p id="completionRate">
+                        0% completion rate
                     </p>
 
                 </div>
 
 
 
-                <!-- STATISTICS -->
+                <!-- IMPORTANT -->
 
-                <div class="stats-grid">
+                <div class="stat-card important">
 
+                    <div class="card-top">
 
-                    <!-- TOTAL -->
+                        <span>Important</span>
 
-                    <div class="stat-card total">
-
-                        <div class="card-top">
-
-                            <span>Total Tasks</span>
-
-                            <div class="card-icon">
-                                ↗
-                            </div>
-
+                        <div class="card-icon">
+                            ☆
                         </div>
-
-                        <h2>0</h2>
 
                     </div>
 
+                    <h2 id="importantCount">0</h2>
+
+                </div>
 
 
-                    <!-- ACTIVE -->
-
-                    <div class="stat-card active">
-
-                        <div class="card-top">
-
-                            <span>Active</span>
-
-                            <div class="card-icon">
-                                ○
-                            </div>
-
-                        </div>
-
-                        <h2>0</h2>
-
-                    </div>
+            </div>
 
 
 
-                    <!-- COMPLETED -->
+            <!-- TASK SUMMARY -->
 
-                    <div class="stat-card completed">
+            <div class="task-summary-grid">
 
-                        <div class="card-top">
 
-                            <span>Completed</span>
+                <!-- TODAY -->
 
-                            <div class="card-icon">
-                                ✓
-                            </div>
+                <div class="summary-card">
 
-                        </div>
+                    <div class="summary-title">
 
-                        <h2>0</h2>
+                        <span>▣</span>
 
-                        <p>0% completion rate</p>
+                        <h2>Today's Tasks</h2>
 
                     </div>
 
+                    <h3 id="todayCount">0</h3>
 
-
-                    <!-- IMPORTANT -->
-
-                    <div class="stat-card important">
-
-                        <div class="card-top">
-
-                            <span>Important</span>
-
-                            <div class="card-icon">
-                                ☆
-                            </div>
-
-                        </div>
-
-                        <h2>0</h2>
-
-                    </div>
-
+                    <p>
+                        Tasks scheduled for today
+                    </p>
 
                 </div>
 
 
 
-                <!-- TASK SUMMARY -->
+                <!-- UPCOMING -->
 
-                <div class="task-summary-grid">
+                <div class="summary-card">
 
+                    <div class="summary-title">
 
-                    <!-- TODAY -->
+                        <span>↗</span>
 
-                    <div class="summary-card">
-
-                        <div class="summary-title">
-
-                            <span>📅</span>
-
-                            <h2>Today's Tasks</h2>
-
-                        </div>
-
-                        <h3>0</h3>
-
-                        <p>
-                            Tasks scheduled for today
-                        </p>
+                        <h2>Upcoming</h2>
 
                     </div>
 
+                    <h3 id="upcomingCount">0</h3>
 
-
-                    <!-- UPCOMING -->
-
-                    <div class="summary-card">
-
-                        <div class="summary-title">
-
-                            <span>↗</span>
-
-                            <h2>Upcoming</h2>
-
-                        </div>
-
-                        <h3>0</h3>
-
-                        <p>
-                            Due in the next 7 days
-                        </p>
-
-                    </div>
-
-
-
-                    <!-- OVERDUE -->
-
-                    <div class="summary-card overdue">
-
-                        <div class="summary-title">
-
-                            <span>○</span>
-
-                            <h2>Overdue</h2>
-
-                        </div>
-
-                        <h3>0</h3>
-
-                        <p>
-                            Tasks past their due date
-                        </p>
-
-                    </div>
-
+                    <p>
+                        Due in the next 7 days
+                    </p>
 
                 </div>
 
 
-            </section>
+
+                <!-- OVERDUE -->
+
+                <div class="summary-card overdue">
+
+                    <div class="summary-title">
+
+                        <span>○</span>
+
+                        <h2>Overdue</h2>
+
+                    </div>
+
+                    <h3 id="overdueCount">0</h3>
+
+                    <p>
+                        Tasks past their due date
+                    </p>
+
+                </div>
+
+
+            </div>
 
 
 
-            <!-- ADD TASK -->
+            <!-- RECENT TASKS -->
 
-            <button class="add-task-btn">
-                +
+            <div class="dashboard-task-section">
+
+                <h2>Recent Tasks</h2>
+
+                <div
+                    id="dashboardTaskList"
+                    class="task-list"
+                ></div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             IMPORTANT PAGE
+        ====================================== -->
+
+        <section
+            class="page"
+            id="important-page"
+        >
+
+
+            <div class="page-header">
+
+                <h1>
+
+                    <span class="page-star">
+                        ★
+                    </span>
+
+                    Important Tasks
+
+                </h1>
+
+                <p>
+                    Focus on your priority items
+                </p>
+
+            </div>
+
+
+            <div
+                class="important-container"
+                id="importantTaskContainer"
+            ></div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             ALL TASKS PAGE
+        ====================================== -->
+
+        <section
+            class="page"
+            id="all-tasks-page"
+        >
+
+
+            <div class="page-header">
+
+                <h1>
+                    All Tasks
+                </h1>
+
+                <p>
+                    View and manage all your tasks
+                </p>
+
+            </div>
+
+
+            <div
+                id="allTaskList"
+                class="all-task-list"
+            ></div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             ANALYTICS PAGE
+        ====================================== -->
+
+        <section
+            class="page"
+            id="analytics-page"
+        >
+
+
+            <div class="page-header">
+
+                <h1>
+                    Analytics
+                </h1>
+
+                <p>
+                    Track your productivity
+                </p>
+
+            </div>
+
+
+            <div class="analytics-grid">
+
+
+                <div class="analytics-card">
+
+                    <h3>Total Tasks</h3>
+
+                    <strong id="analyticsTotal">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <h3>Completed</h3>
+
+                    <strong id="analyticsCompleted">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <h3>Active</h3>
+
+                    <strong id="analyticsActive">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <h3>Important</h3>
+
+                    <strong id="analyticsImportant">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-card">
+
+                <h2>Completion Progress</h2>
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="progressFill"
+                    ></div>
+
+                </div>
+
+                <p id="progressText">
+                    0% completed
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             FLOATING ADD BUTTON
+        ====================================== -->
+
+        <button
+            class="add-task-btn"
+            id="addTaskButton"
+        >
+            +
+        </button>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================
+     ADD TASK MODAL
+========================================= -->
+
+<div
+    class="modal-overlay"
+    id="taskModal"
+>
+
+
+    <div class="task-modal">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>Add New Task</h2>
+
+                <p>
+                    Create a task and stay organized
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="close-modal"
+                id="closeModal"
+            >
+                ×
             </button>
 
+        </div>
 
-        </main>
+
+
+        <!-- FORM -->
+
+        <form id="taskForm">
+
+
+            <!-- TITLE -->
+
+            <div class="form-group">
+
+                <label for="taskTitle">
+                    Task Title
+                </label>
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="What do you need to do?"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-group">
+
+                <label for="taskDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="taskDescription"
+                    rows="3"
+                    placeholder="Add some details..."
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- DATE + PRIORITY -->
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label for="taskDate">
+                        Due Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="taskDate"
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="taskPriority">
+                        Priority
+                    </label>
+
+                    <select id="taskPriority">
+
+                        <option value="low">
+                            Low
+                        </option>
+
+                        <option
+                            value="medium"
+                            selected
+                        >
+                            Medium
+                        </option>
+
+                        <option value="high">
+                            High
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CATEGORY -->
+
+            <div class="form-group">
+
+                <label for="taskCategory">
+                    Category
+                </label>
+
+                <select id="taskCategory">
+
+                    <option value="work">
+                        💼 Work
+                    </option>
+
+                    <option value="personal">
+                        👤 Personal
+                    </option>
+
+                    <option value="study">
+                        📚 Study
+                    </option>
+
+                    <option value="shopping">
+                        🛒 Shopping
+                    </option>
+
+                    <option value="other">
+                        📌 Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- IMPORTANT -->
+
+            <div class="important-checkbox">
+
+                <input
+                    type="checkbox"
+                    id="taskImportant"
+                >
+
+                <label for="taskImportant">
+                    ⭐ Mark as important
+                </label>
+
+            </div>
+
+
+
+            <!-- BUTTONS -->
+
+            <div class="modal-actions">
+
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    id="cancelTask"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="submit-task-btn"
+                >
+                    Add Task
+                </button>
+
+
+            </div>
+
+
+        </form>
+
 
     </div>
+
+</div>
+
 
 
 <script src="script.js"></script>
